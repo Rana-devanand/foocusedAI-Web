@@ -17,6 +17,8 @@ export const metadata: Metadata = {
   description: "Manage your applications with ease",
 };
 
+import { Toaster } from "sonner";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -28,12 +30,9 @@ export default function RootLayout({
         <ReduxProvider>
           <ThemeProvider>
             <LenisProvider>
+              <Toaster position="top-right" richColors />
               <div className="flex min-h-screen flex-col">
-                <Navbar />
-                <main className="grow">
-                  {children}
-                </main>
-                <Footer />
+                {children}
               </div>
             </LenisProvider>
           </ThemeProvider>
