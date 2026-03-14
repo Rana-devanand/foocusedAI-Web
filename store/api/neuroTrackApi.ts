@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const neuroTrackApi = createApi({
   reducerPath: 'neuroTrackApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: process.env.NEXT_PUBLIC_NEUROTRACK_API_URL || 'http://localhost:8000/api',
+    baseUrl: process.env.NEXT_PUBLIC_NEUROTRACK_API_URL || 'https://focused-ai-be.vercel.app/api',
     prepareHeaders: (headers) => {
       const token = typeof window !== 'undefined' ? localStorage.getItem('admin_token') : null;
       if (token) {

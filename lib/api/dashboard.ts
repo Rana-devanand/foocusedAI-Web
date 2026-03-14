@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5001/api';
+const API_URL = process.env.NEXT_PUBLIC_API_URL || 'https://admin-hub-backend.vercel.app/api';
 
 export const getDashboardData = async (token: string) => {
   const response = await fetch(`${API_URL}/s2s/data`, {
