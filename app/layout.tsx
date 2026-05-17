@@ -15,6 +15,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Admin Hub | modern SaaS Dashboard",
   description: "Manage your applications with ease",
+  other: {
+    "facebook-domain-verification": "crc4aqmxjp87hzsgk5u6tzycwf1u7m",
+  },
 };
 
 import { Toaster } from "sonner";
