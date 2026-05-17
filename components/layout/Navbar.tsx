@@ -52,9 +52,9 @@ const Navbar = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-4">
-          <Link href="/login">
+          {/* <Link href="/login">
             <Button size="sm" className="rounded-sm bg-slate-700 text-white">Admin Login</Button>
-          </Link>
+          </Link> */}
 
           {/* Mobile Menu Button */}
           <button

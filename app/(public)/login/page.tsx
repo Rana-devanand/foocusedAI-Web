@@ -14,12 +14,14 @@ import { toast } from "sonner";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const router = useRouter();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     dispatch(setLoading(true));
+    setIsLoading(true);
 
     try {
       const data = await loginApi(email, password);
@@ -30,6 +32,7 @@ const Login = () => {
       toast.error(err.message || "Something went wrong. Please try again.");
     } finally {
       dispatch(setLoading(false));
+      setIsLoading(false);
     }
   };
 
@@ -73,7 +76,7 @@ const Login = () => {
                 required
               />
             </div>
-            <Button className="w-full" size="lg" type="submit">Sign In</Button>
+            <Button className="w-full" size="lg" type="submit" isLoading={isLoading}>Sign In</Button>
           </form>
         </Card>
       </motion.div>
